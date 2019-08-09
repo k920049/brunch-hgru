@@ -1,7 +1,4 @@
 import tensorflow as tf
-
-from tensorflow.python.keras.layers.recurrent import *
-from tensorflow.python.platform import tf_logging
 from model.Helper import *
 
 
@@ -13,12 +10,11 @@ class HierarchicalRNNCell(Layer):
                  embedding_layer,
                  **kwargs):
 
-        self.user_cells = self.verify_cells(user_cells)
-        self.user_cell_size = self.user_cells[0].state_size
-        self.session_cells = self.verify_cells(session_cells)
-        self.session_cell_size = self.session_cells[0].state_size
+        self.user_cells         = self.verify_cells(user_cells)
+        self.session_cells      = self.verify_cells(session_cells)
+        self.user_cell_size     = self.user_cells[0].state_size
+        self.session_cell_size  = self.session_cells[0].state_size
         self.cells = self.session_cells + self.user_cells
-
         self.embedding = embedding_layer
 
         super(HierarchicalRNNCell, self).__init__(**kwargs)
@@ -45,7 +41,7 @@ class HierarchicalRNNCell(Layer):
             state_u = state_u[0] if len(state_u) == 1 else state_u
 
             # mask the previous session cell
-            state_s = session_mask * state_s + (1 - session_mask) * state_u
+            state_s = session_mask * state_s + (1.0 - session_mask) * state_u
             # run the session cell
             if generic_utils.has_arg(cell_s.call, "constants"):
                 session_inputs, new_state_s = cell_s.call(session_inputs, state_s, constants=constants, **kwargs)
@@ -60,7 +56,7 @@ class HierarchicalRNNCell(Layer):
                 user_inputs, new_state_u = cell_u.call(user_inputs, state_u, constants=constants, **kwargs)
             else:
                 user_inputs, new_state_u = cell_u.call(user_inputs, state_u, **kwargs)
-            new_state_u = user_mask * new_state_u + (1 - user_mask) * state_u
+            new_state_u = user_mask * new_state_u + (1.0 - user_mask) * state_u
             new_nested_states.append(new_state_u)
 
         return session_inputs, nest.pack_sequence_as(state_size, nest.flatten(new_nested_states))
@@ -93,7 +89,7 @@ class HierarchicalRNNCell(Layer):
         self.built = True
 
     @staticmethod
-    def verify_cells(cells, label):
+    def verify_cells(cells):
         for cell in cells:
             if not hasattr(cell, 'call'):
                 raise ValueError('All cells must have a `call` method. received cells:', cells)
@@ -113,6 +109,17 @@ class HierarchicalRNNCell(Layer):
             return self.session_cells[-1].state_size[0]
         else:
             return self.session_cells[-1].state_size
+
+    def get_initial_state(self, inputs=None, batch_size=None, dtype=None):
+        initial_states = []
+        for cell in self.cells:
+            get_initial_state_fn = getattr(cell, 'get_initial_state', None)
+            if get_initial_state_fn:
+                initial_states.append(get_initial_state_fn(inputs=inputs, batch_size=batch_size, dtype=dtype))
+            else:
+                initial_states.append(_generate_zero_filled_state_for_cell(cell, inputs, batch_size, dtype))
+        return tuple(initial_states)
+
 
     def get_config(self):
         cells = []
