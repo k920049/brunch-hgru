@@ -45,7 +45,10 @@ scikit-learn
 # you need a GPU card with CUDA Compute Capability 3.0 or higher support, and
 # you must install CUDA, cuDNN and more: see tensorflow.org for the detailed
 # installation instructions.
-tensorflow==2.0.0-beta1
+# tensorflow==2.0.0-beta1
+# tf-nightly-2.0-preview
+tf-nightly-gpu-2.0-preview
+# tensorflow
 Theano
 #tensorflow-gpu
 

@@ -1,5 +1,8 @@
 import tensorflow as tf
-from model.Helper import *
+
+from model.Helper import _generate_zero_filled_state_for_cell, _is_multiple_state
+from tensorflow.python.keras.layers import deserialize as deserialize_layer
+from tensorflow.python.keras.layers.recurrent import *
 
 
 class HierarchicalRNNCell(Layer):
@@ -24,39 +27,32 @@ class HierarchicalRNNCell(Layer):
         state_size = (self.state_size)
         nested_states = nest.pack_sequence_as(state_size, nest.flatten(states))
 
-        sequence        = tf.gather(inputs, indices=[0], axis=1)    # [batch_size, 1]
-        session_mask    = tf.gather(inputs, indices=[1], axis=1)    # [batch_size, 1]
-        user_mask       = tf.gather(inputs, indices=[2], axis=1)    # [batch_size, 1]
-        session_inputs  = tf.squeeze(self.embedding(sequence))      # [batch_size, embedding_dim]
+        sequence        = tf.gather(inputs, indices=[0], axis=1)            # [batch_size, 1]
+        session_mask    = tf.gather(inputs, indices=[1], axis=1)            # [batch_size, 1]
+        user_mask       = tf.gather(inputs, indices=[2], axis=1)            # [batch_size, 1]
+        session_inputs  = tf.squeeze(self.embedding(sequence), axis=1)      # [batch_size, embedding_dim]
 
         new_nested_states = []
-        for idx, (cell_s, cell_u, state) in enumerate(zip(self.session_cells, self.user_cells, nested_states)):
+        for idx, (cell_s, cell_u) in enumerate(zip(self.session_cells, self.user_cells)):
             # state of the previous session cell
-            state_s = state[:, : self.session_cell_size]
-            state_s = state_s if nest.is_sequence(state_s) else [state_s]
-            state_s = state_s[0] if len(state_s) == 1 else state_s
+            state_s = nested_states[2 * idx]
             # state of the previous user cell
-            state_u = state[:, self.session_cell_size: self.session_cell_size + self.user_cell_size]
-            state_u = state_u if nest.is_sequence(state_u) else [state_u]
-            state_u = state_u[0] if len(state_u) == 1 else state_u
-
+            state_u = nested_states[2 * idx + 1]
             # mask the previous session cell
-            state_s = session_mask * state_s + (1.0 - session_mask) * state_u
+            state_s = tf.multiply(session_mask, state_s) + tf.multiply(1.0 - session_mask, state_u)
             # run the session cell
             if generic_utils.has_arg(cell_s.call, "constants"):
-                session_inputs, new_state_s = cell_s.call(session_inputs, state_s, constants=constants, **kwargs)
+                session_inputs, new_state_s = cell_s.call(session_inputs, [state_s], constants=constants, **kwargs)
             else:
-                session_inputs, new_state_s = cell_s.call(session_inputs, state_s, **kwargs)
-            new_nested_states.append(new_state_s)
+                session_inputs, new_state_s = cell_s.call(session_inputs, [state_s], **kwargs)
+            new_nested_states.append(new_state_s[0])
 
-            # run the user cell
-            if idx == 0:
-                user_inputs = new_state_s
+            user_inputs = new_state_s[0]
             if generic_utils.has_arg(cell_u.call, "constants"):
-                user_inputs, new_state_u = cell_u.call(user_inputs, state_u, constants=constants, **kwargs)
+                user_inputs, new_state_u = cell_u.call(user_inputs, [state_u], constants=constants, **kwargs)
             else:
-                user_inputs, new_state_u = cell_u.call(user_inputs, state_u, **kwargs)
-            new_state_u = user_mask * new_state_u + (1.0 - user_mask) * state_u
+                user_inputs, new_state_u = cell_u.call(user_inputs, [state_u], **kwargs)
+            new_state_u = tf.multiply(user_mask, new_state_u[0]) + tf.multiply(1.0 - user_mask, state_u)
             new_nested_states.append(new_state_u)
 
         return session_inputs, nest.pack_sequence_as(state_size, nest.flatten(new_nested_states))
@@ -67,25 +63,26 @@ class HierarchicalRNNCell(Layer):
 
         if isinstance(input_shape, list):
             input_shape = input_shape[0]
+        input_shape = (input_shape[0], self.embedding.output_dim)
+        for idx, (cell_s, cell_u) in enumerate(zip(self.session_cells, self.user_cells)):
+            with tf.name_scope("session-{}".format(idx)):
+                # Setting a session cell first
+                if isinstance(cell_s, Layer):
+                    if not cell_s.built:
+                        cell_s.build(input_shape)
 
-        for cell_s, cell_u in zip(self.session_cells, self.user_cells):
-            # Setting a session cell first
-            if isinstance(cell_s, Layer):
-                if not cell_s.built:
-                    cell_s.build(input_shape)
-
-            if getattr(cell_s, 'output_size', None) is not None:
-                output_dim = cell_s.output_size
-            elif _is_multiple_state(cell_s.state_size):
-                output_dim = cell_s.state_size[0]
-            else:
-                output_dim = cell_s.state_size
-
-            input_shape = tuple([input_shape[0]] + tensor_shape.as_shape(output_dim).as_list())
-            # Then set a user cell later
-            if isinstance(cell_u, Layer):
-                if not cell_u.built:
-                    cell_u.build(input_shape)
+                if getattr(cell_s, 'output_size', None) is not None:
+                    output_dim = cell_s.output_size
+                elif _is_multiple_state(cell_s.state_size):
+                    output_dim = cell_s.state_size[0]
+                else:
+                    output_dim = cell_s.state_size
+            with tf.name_scope("user-{}".format(idx)):
+                input_shape = tuple([input_shape[0]] + tensor_shape.as_shape(output_dim).as_list())
+                # Then set a user cell later
+                if isinstance(cell_u, Layer):
+                    if not cell_u.built:
+                        cell_u.build(input_shape)
         self.built = True
 
     @staticmethod
@@ -99,7 +96,7 @@ class HierarchicalRNNCell(Layer):
 
     @property
     def state_size(self):
-        return tuple(cell_s.state_size + cell_u.state_size for cell_s, cell_u in zip(self.session_cells, self.user_cells))
+        return tuple(cell.state_size for cell in self.cells)
 
     @property
     def output_size(self):
@@ -113,30 +110,46 @@ class HierarchicalRNNCell(Layer):
     def get_initial_state(self, inputs=None, batch_size=None, dtype=None):
         initial_states = []
         for cell in self.cells:
-            get_initial_state_fn = getattr(cell, 'get_initial_state', None)
-            if get_initial_state_fn:
-                initial_states.append(get_initial_state_fn(inputs=inputs, batch_size=batch_size, dtype=dtype))
-            else:
-                initial_states.append(_generate_zero_filled_state_for_cell(cell, inputs, batch_size, dtype))
+            initial_states.append(_generate_zero_filled_state_for_cell(cell, inputs, batch_size, dtype))
         return tuple(initial_states)
 
 
     def get_config(self):
-        cells = []
-        for cell in self.cells:
-            cells.append({
+        user_cells = []
+        for cell in self.user_cells:
+            user_cells.append({
                 'class_name': cell.__class__.__name__,
                 'config': cell.get_config()
             })
-        config = {'cells': cells}
+        session_cells = []
+        for cell in self.session_cells:
+            session_cells.append({
+                'class_name': cell.__class__.__name__,
+                'config': cell.get_config()
+            })
+        embedding_config = {
+            'class_name': self.embedding.__class__.__name__,
+            'config': self.embedding.get_config()
+        }
+        config = {
+            'user_cells': user_cells,
+            'session_cells': session_cells,
+            'embedding_layer': embedding_config
+        }
         base_config = super(HierarchicalRNNCell, self).get_config()
         return dict(list(base_config.items()) + list(config.items()))
 
     @classmethod
     def from_config(cls, config, custom_objects=None):
-        from tensorflow.python.keras.layers import deserialize as deserialize_layer  # pylint: disable=g-import-not-at-top
-        cells = []
-        for cell_config in config.pop('cells'):
-            cells.append(deserialize_layer(cell_config, custom_objects=custom_objects))
-        return cls(cells, **config)
+
+        user_cells = []
+        session_cells = []
+
+        for cell_config in config.pop('user_cells'):
+            user_cells.append(deserialize_layer(cell_config, custom_objects=custom_objects))
+        for cell_config in config.pop('session_cells'):
+            session_cells.append(deserialize_layer(cell_config, custom_objects=custom_objects))
+        embedding = deserialize_layer(config.pop('embedding_layer'), custom_objects=custom_objects)
+
+        return cls(user_cells, session_cells, embedding, **config)
 

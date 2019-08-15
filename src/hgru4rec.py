@@ -612,7 +612,13 @@ class HGRU4Rec:
                 updates[fullP] = T.inc_subtensor(sparam, - delta)
         return updates
 
-    def model(self, X, Sstart, Ustart, Hs, Hu, Y=None,
+    def model(self,
+              X,
+              Sstart,
+              Ustart,
+              Hs,
+              Hu,
+              Y=None,
               drop_p_hidden_usr=0.0,
               drop_p_hidden_ses=0.0,
               drop_p_init=0.0):
@@ -727,6 +733,7 @@ class HGRU4Rec:
             Hs_new.append(h_s_i)
 
         if Y is not None:
+
             Ssy = self.Wsy[Y]
             SBy = self.By[Y]
             preact = T.dot(h_s, Ssy.T) + SBy.flatten()
@@ -808,7 +815,12 @@ class HGRU4Rec:
 
         X, Y = T.ivectors(2)
         Sstart, Ustart = T.fvectors(2)
-        Hs_new, Hu_new, Y_pred, sampled_params = self.model(X, Sstart, Ustart, self.Hs, self.Hu, Y,
+        Hs_new, Hu_new, Y_pred, sampled_params = self.model(X,
+                                                            Sstart,
+                                                            Ustart,
+                                                            self.Hs,
+                                                            self.Hu,
+                                                            Y,
                                                             drop_p_hidden_usr=self.dropout_p_hidden_usr,
                                                             drop_p_hidden_ses=self.dropout_p_hidden_ses,
                                                             drop_p_init=self.dropout_p_init)
