@@ -3,7 +3,7 @@ import numpy as np
 import os
 
 from fire import Fire
-from pipeline.Reader import Reader
+from pipeline.tensorflow.Reader import Reader
 
 class Datasets(Reader):
 

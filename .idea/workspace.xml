@@ -2,20 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e6368c4-ac25-41fd-8810-6508b27dae44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/legacy/torchmodel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/tensorflow/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/torch/Cell.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/torch/ListModule.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/torch/Loss.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/torch/Wrapper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/torch/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pipeline/tensorflow/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pipeline/torch/Dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pipeline/torch/Vectorizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pipeline/torch/Vocabulary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pipeline/torch/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/torchmodel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/hgru4rec.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hgru4rec.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Loss.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Loss.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Wrapper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/Untitled1-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/Untitled1-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/tensorflow/Helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Loss.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/tensorflow/Loss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/tensorflow/Wrapper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebook/Untitled1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/Untitled1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipeline/Datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipeline/Datasets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipeline/Datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipeline/tensorflow/Datasets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipeline/History.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipeline/tensorflow/History.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipeline/Reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipeline/tensorflow/Reader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hgru4rec.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/hgru4rec.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,103 +40,97 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/Wrapper.py">
+        <entry file="file://$PROJECT_DIR$/model/torch/Cell.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="363">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#0#12#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="225">
-                <caret line="15" column="135" lean-forward="true" selection-start-line="15" selection-start-column="135" selection-end-line="15" selection-end-column="200" />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/model.py">
+        <entry file="file://$PROJECT_DIR$/torchmodel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="120" column="46" selection-start-line="120" selection-start-column="46" selection-end-line="120" selection-end-column="46" />
+            <state relative-caret-position="478">
+              <caret line="185" column="51" selection-start-line="185" selection-start-column="51" selection-end-line="185" selection-end-column="51" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pipeline/Datasets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pipeline/History.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pipeline/Reader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/Loss.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hgru4rec.py">
+        <entry file="file://$PROJECT_DIR$/model/torch/Wrapper.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="437" column="16" selection-start-line="437" selection-start-column="13" selection-end-line="437" selection-end-column="16" />
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/Helper.py">
+        <entry file="file://$PROJECT_DIR$/pipeline/torch/Dataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="54" />
+            <state relative-caret-position="513">
+              <caret line="43" column="87" selection-start-line="43" selection-start-column="87" selection-end-line="43" selection-end-column="87" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/torch/utils/data/dataloader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5055">
+              <caret line="345" selection-start-line="345" selection-end-line="345" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/torch/nn/modules/module.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="481">
+              <caret line="564" selection-start-line="564" selection-end-line="564" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/torch/nn/modules/rnn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="772" selection-start-line="772" selection-end-line="772" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/torch/Loss.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="639">
+              <caret line="202" selection-start-line="202" selection-end-line="202" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,6 +155,10 @@
       <find>self.neg</find>
       <find>final_ac</find>
       <find>Wsy</find>
+      <find>tied_weight</find>
+      <find>soft</find>
+      <find>nan</find>
+      <find>training</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -166,13 +178,24 @@
         <option value="$PROJECT_DIR$/data/brunch/predict/dev.users" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/start.sh" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/model/Loss.py" />
         <option value="$PROJECT_DIR$/src/hgru4rec.py" />
         <option value="$PROJECT_DIR$/model/Wrapper.py" />
         <option value="$PROJECT_DIR$/pipeline/Datasets.py" />
         <option value="$PROJECT_DIR$/model.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/model/torch/Loss.py" />
+        <option value="$PROJECT_DIR$/src/__init__.py" />
+        <option value="$PROJECT_DIR$/src/utils.py" />
+        <option value="$PROJECT_DIR$/pipeline/torch/Vocabulary.py" />
+        <option value="$PROJECT_DIR$/pipeline/torch/Vectorizer.py" />
+        <option value="$PROJECT_DIR$/model/legacy/torchmodel.py" />
+        <option value="$PROJECT_DIR$/model/torch/ListModule.py" />
+        <option value="$PROJECT_DIR$/pipeline/torch/Dataset.py" />
+        <option value="$PROJECT_DIR$/model/torch/Wrapper.py" />
+        <option value="$PROJECT_DIR$/model/torch/Cell.py" />
+        <option value="$PROJECT_DIR$/torchmodel.py" />
       </list>
     </option>
   </component>
@@ -189,23 +212,45 @@
         <subPane>
           <expand>
             <path>
-              <item name="hgru4rec" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hgru4rec" type="462c0819:PsiDirectoryNode" />
+              <item name="brunch-hgru" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brunch-hgru" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="hgru4rec" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hgru4rec" type="462c0819:PsiDirectoryNode" />
+              <item name="brunch-hgru" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brunch-hgru" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="hgru4rec" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hgru4rec" type="462c0819:PsiDirectoryNode" />
+              <item name="brunch-hgru" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brunch-hgru" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="brunch" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="hgru4rec" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hgru4rec" type="462c0819:PsiDirectoryNode" />
+              <item name="brunch-hgru" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brunch-hgru" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brunch-hgru" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brunch-hgru" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="torch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brunch-hgru" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brunch-hgru" type="462c0819:PsiDirectoryNode" />
+              <item name="pipeline" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brunch-hgru" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brunch-hgru" type="462c0819:PsiDirectoryNode" />
+              <item name="pipeline" type="462c0819:PsiDirectoryNode" />
+              <item name="torch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brunch-hgru" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brunch-hgru" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -231,6 +276,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pipeline/tensorflow" />
+      <recent name="$PROJECT_DIR$/model/tensorflow" />
       <recent name="$PROJECT_DIR$/data/brunch" />
       <recent name="$PROJECT_DIR$/pipeline" />
     </key>
@@ -247,18 +294,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.model">
+  <component name="RunManager" selected="Python.torchmodel">
     <configuration name="Datasets" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hgru4rec" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pipeline" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pipeline/Datasets.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pipeline/tensorflow/Datasets.py" />
       <option name="PARAMETERS" value="--data_path ../data/brunch show --n 100" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -267,7 +317,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Loss" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Wrapper (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hgru4rec" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -275,12 +325,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model/torch" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/Loss.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/torch/Wrapper.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -293,13 +343,16 @@
       <module name="hgru4rec" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/Wrapper.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/tensorflow/Wrapper.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -334,6 +387,9 @@
       <module name="hgru4rec" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -349,17 +405,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="torchmodel" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hgru4rec" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="/home/jeasungpark/Repository/brunch" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/torchmodel.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -369,19 +425,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Loss" />
       <item itemvalue="Python.model" />
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.Wrapper" />
       <item itemvalue="Python.Datasets" />
+      <item itemvalue="Python.torchmodel" />
+      <item itemvalue="Python.Wrapper (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.torchmodel" />
+        <item itemvalue="Python.Wrapper (1)" />
         <item itemvalue="Python.model" />
         <item itemvalue="Python.Datasets" />
         <item itemvalue="Python.Wrapper" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.Loss" />
       </list>
     </recent_temporary>
   </component>
@@ -412,11 +468,15 @@
       <workItem from="1565700350966" duration="658000" />
       <workItem from="1565701017708" duration="1643000" />
       <workItem from="1565766341688" duration="17747000" />
+      <workItem from="1565860547092" duration="9405000" />
+      <workItem from="1565938603424" duration="19783000" />
+      <workItem from="1566102689149" duration="1434000" />
+      <workItem from="1566108781891" duration="7863000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99570000" />
+    <option name="totallyTimeSpent" value="138055000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -429,8 +489,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34984025" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24920128" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -486,33 +547,45 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pipeline/History.py</url>
+          <url>file://$PROJECT_DIR$/pipeline/tensorflow/History.py</url>
           <line>17</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/model/Loss.py</url>
+          <url>file://$PROJECT_DIR$/model/tensorflow/Loss.py</url>
           <line>68</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/model/Wrapper.py</url>
+          <url>file://$PROJECT_DIR$/model/tensorflow/Wrapper.py</url>
           <line>48</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/model/Wrapper.py</url>
+          <url>file://$PROJECT_DIR$/model/tensorflow/Wrapper.py</url>
           <line>43</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/torchmodel.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/torchmodel.py</url>
+          <line>106</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/brunch_hgru$Wrapper__1_.coverage" NAME="Wrapper (1) Coverage Results" MODIFIED="1566112648925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/torch" />
     <SUITE FILE_PATH="coverage/hgru4rec$History.coverage" NAME="History Coverage Results" MODIFIED="1564985840994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pipeline" />
     <SUITE FILE_PATH="coverage/hgru4rec$model.coverage" NAME="model Coverage Results" MODIFIED="1565790025155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/hgru4rec$Wrapper.coverage" NAME="Wrapper Coverage Results" MODIFIED="1565780706390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/hgru4rec$Loss.coverage" NAME="Loss Coverage Results" MODIFIED="1565424562038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/brunch_hgru$torchmodel.coverage" NAME="torchmodel Coverage Results" MODIFIED="1566121453586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
@@ -534,71 +607,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/train_hier_gru.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="178" column="44" selection-start-line="178" selection-start-column="44" selection-end-line="178" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/xing_dense_small.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pipeline.py" />
-    <entry file="file://$PROJECT_DIR$/data/brunch/read/2019010120_2019010121" />
-    <entry file="file://$PROJECT_DIR$/data/brunch/read/2019010119_2019010120">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/brunch/read/2018100100_2018100101">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/xing/build_dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/dictionary.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/brunch/predict/dev.users">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/start.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="55" selection-start-line="2" selection-end-line="17" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/tensorflow/python/keras/utils/tf_utils.py" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/tensorflow/python/keras/layers/recurrent.py" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/tensorflow/python/keras/engine/base_layer_utils.py" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/tensorflow/python/framework/tensor_shape.py" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/tensorflow/python/keras/backend.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/numpy/lib/npyio.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/tensorflow/python/eager/function.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/tensorflow/python/eager/execute.py" />
@@ -641,23 +649,6 @@
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/tensorflow_core/python/keras/engine/base_layer.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/tensorflow/python/keras/utils/generic_utils.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/tensorflow_core/python/autograph/impl/api.py" />
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pipeline/History.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -668,21 +659,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Helper.py">
+    <entry file="file://$PROJECT_DIR$/model/tensorflow/Wrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="54" />
+        <state relative-caret-position="660">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hgru4rec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="437" column="16" selection-start-line="437" selection-start-column="13" selection-end-line="437" selection-end-column="16" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="225">
+            <caret line="15" column="135" selection-start-line="15" selection-start-column="135" selection-end-line="15" selection-end-column="200" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pipeline/Reader.py">
+    <entry file="file://$PROJECT_DIR$/pipeline/tensorflow/Datasets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pipeline/tensorflow/History.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pipeline/tensorflow/Reader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
@@ -692,29 +709,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="225">
-            <caret line="15" column="135" lean-forward="true" selection-start-line="15" selection-start-column="135" selection-end-line="15" selection-end-column="200" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Wrapper.py">
+    <entry file="file://$PROJECT_DIR$/model/tensorflow/Loss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Loss.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
+        <state relative-caret-position="1065">
           <caret line="76" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
@@ -722,22 +719,184 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pipeline/Datasets.py">
+    <entry file="file://$PROJECT_DIR$/src/hgru4rec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="6435">
+          <caret line="437" column="16" selection-start-line="437" selection-start-column="13" selection-end-line="437" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/tensorflow/Helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
+        <state relative-caret-position="681">
           <caret line="120" column="46" selection-start-line="120" selection-start-column="46" selection-end-line="120" selection-end-column="46" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/brunch/train.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="210">
+          <caret line="161" column="40" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/legacy/torchmodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1053">
+          <caret line="221" selection-start-line="221" selection-end-line="221" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pipeline/torch/Vocabulary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-276" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/torch/ListModule.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/torch/autograd/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pipeline/torch/Vectorizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="58" column="62" selection-start-line="58" selection-start-column="62" selection-end-line="58" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/torch/nn/functional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21795">
+          <caret line="1466" selection-start-line="1466" selection-end-line="1466" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/torch/utils/data/_utils/collate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/torch/utils/data/dataloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5055">
+          <caret line="345" selection-start-line="345" selection-end-line="345" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/torch/Loss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="202" selection-start-line="202" selection-end-line="202" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pipeline/torch/Dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="43" column="87" selection-start-line="43" selection-start-column="87" selection-end-line="43" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/torch/nn/modules/rnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="772" selection-start-line="772" selection-end-line="772" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/torch/nn/modules/module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="564" selection-start-line="564" selection-end-line="564" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/torch/Cell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/torch/Wrapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/torchmodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="185" column="51" selection-start-line="185" selection-start-column="51" selection-end-line="185" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>

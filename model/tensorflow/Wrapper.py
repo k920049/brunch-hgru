@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-from model.Helper import _generate_zero_filled_state_for_cell, _is_multiple_state
+from model.tensorflow.Helper import _generate_zero_filled_state_for_cell, _is_multiple_state
 from tensorflow.python.keras.layers import deserialize as deserialize_layer
 from tensorflow.python.keras.layers.recurrent import *
 

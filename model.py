@@ -1,19 +1,15 @@
 import tensorflow as tf
-import pandas as pd
 import numpy as np
 import datetime
 
-from model.Wrapper import HierarchicalRNNCell
-from model.Loss import RankingLoss
-from pipeline.Datasets import Datasets
+from model.tensorflow.Wrapper import HierarchicalRNNCell
+from model.tensorflow.Loss import RankingLoss
+from pipeline.tensorflow.Datasets import Datasets
 
 from tensorflow.python.keras.layers.recurrent import RNN, GRUCell
 from tensorflow.python.keras.layers.embeddings import Embedding
 from tensorflow.python.keras.layers.wrappers import TimeDistributed
 from tensorflow.python.keras.callbacks import ModelCheckpoint, TensorBoard
-from tensorflow.python.keras.metrics import BinaryAccuracy
-from tensorflow.python import debug as tf_debug
-from tensorflow.python.keras import backend as K
 
 
 def custom_loss(y_true, y_pred):

@@ -47,10 +47,12 @@ scikit-learn
 # installation instructions.
 # tensorflow==2.0.0-beta1
 # tf-nightly-2.0-preview
-tf-nightly-gpu-2.0-preview
+# tf-nightly-gpu-2.0-preview
 # tensorflow
-Theano
-#tensorflow-gpu
+# Theano
+# tensorflow-gpu
+torch
+torchvision
 
 
 # Optional: OpenAI gym is only needed for the Reinforcement Learning chapter.

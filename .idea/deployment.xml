@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="jeasungpark@34.80.72.207:22">
-    <serverData>
-      <paths name="jeasungpark@34.80.72.207:22">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/Repository/brunch" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-          <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/data/brunch/contents" />
-            <excludedPath local="true" path="$PROJECT_DIR$/data/brunch/read" />
-            <excludedPath path="/Repository/brunch/venv" />
-            <excludedPath path="/Repository/brunch/data/checkpoints" />
-            <excludedPath path="/Repository/brunch/data/logs" />
-          </excludedPaths>
-        </serverdata>
-      </paths>
-    </serverData>
+  <component name="PublishConfigData" autoUpload="Always">
     <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

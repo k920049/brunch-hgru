@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime
 from tqdm import tqdm
 from fire import Fire
-from pipeline.Reader import Reader
+from pipeline.tensorflow.Reader import Reader
 
 class History(Reader):
 
